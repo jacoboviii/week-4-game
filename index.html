@@ -7,19 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystals Collector</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <div id="crystals">
-        <img class="crystal-image" src="assets/images/crystal2.jpg" alt="crystal 1">
-        <img class="crystal-image" src="assets/images/crystal1.jpg" alt="crystal 2">
-        <img class="crystal-image" src="assets/images/crystal3.jpg" alt="crystal 3">
-        <img class="crystal-image" src="assets/images/crystal4.jpg" alt="crystal 4">
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Crystals Collector</h1>
+            <hr class="my-4">
+            <p>&bull; Click on the crystals to play the game &bull; Each crystal has a hidden number of points &bull; Every time you click on a
+                crystal the points get added to your total score &bull; You win by matching your total score with that of the target
+                score
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="text-center" id="crystals"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        Target Score:
+                        <span id="target-score"></span>
+                    </div>
+                    <div class="card-header">
+                        Your Total Score:
+                        <span id="user-score"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Wins
+                            <span id="wins"></span>
+                        </li>
+                        <li class="list-group-item">Losses
+                            <span id="losses"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="alert-window" class="alert alert-info collapse" role="alert">
+                    <span id="alert-message"></span>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
+
 </body>
 
 </html>
